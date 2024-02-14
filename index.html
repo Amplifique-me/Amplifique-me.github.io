@@ -1,0 +1,33 @@
+<ampl-survey identifier="59c950f7e5b20500126eade1" anonymous="true" debug="true"></ampl-survey>
+<script defer src="https://cdn.amplifique.me/amplifiqueme-inapp-survey.js"></script>
+<script>
+    window.Amplifiqueme = {};
+    window.Amplifiqueme.onLoad = () => {
+        page = new URLSearchParams(window.location.search).get('page');
+        window.Amplifiqueme.identify(
+            {
+                custom_fields: {
+                    page: page
+                }
+            }, true)
+    }
+</script>
+<style>
+    body {
+        background-color: white;
+        width: 300px;
+        height: 300px;
+    }
+
+    .inapp-backdrop {
+        display: none !important;
+    }
+
+    .inapp-survey {
+        box-shadow: none !important;
+    }
+
+    .inapp-thanks .inapp-button {
+        display: none !important;
+    }
+</style>
